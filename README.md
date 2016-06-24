@@ -23,6 +23,6 @@ This is a template for using Google OAuth2.0 with Express and Passport.js. I wil
 
 9. Make certain your .env file is included in your .gitignore - it should already be.
 
-10. Run node/nodemon on app.js and visit http://localhost:1337
+10. Run npm start or nodemon and visit http://localhost:1337
 
 11. :)
