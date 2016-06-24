@@ -1,3 +1,4 @@
+var db = require('./db/api');
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 require('dotenv').config();
@@ -20,9 +21,17 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     console.log(profile);
+    db.findUserById(profile.id).then(function(id) {
+      if (id) {
+        return done(null, profile);
+      } else {
+        db.createUser(profile.id).then(function(id) {
+          return done(null, profile);
+        });
+      }
+    });
     // Query the database to find user record associated with this
     // google profile, then pass that object to done callback
-    return done(null, profile);
   }
 ));
 
