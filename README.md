@@ -31,4 +31,6 @@ This is a template for using Google OAuth2.0 with Express and Passport.js. I wil
 
 13. Run npm start or nodemon and visit http://localhost:1337
 
-14. :)
+14. As is, the only thing saved into your database after logging in via Google is the user's googleId. I wanted to set up the db to a basic level. There are many Mongo examples, but not many others... I also left a console.log in on the auth.js file in the GoogleStrategy so that you can view what's coming back from Google and use the info however you'd like!
+
+15. :)
