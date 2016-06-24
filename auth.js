@@ -13,7 +13,6 @@ passport.deserializeUser(function(obj, done) {
   done(null, obj);
 });
 
-
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -21,6 +20,8 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     console.log(profile);
+    // Query the database to find user record associated with this
+    // google profile, then pass that object to done callback
     db.findUserById(profile.id).then(function(id) {
       if (id) {
         return done(null, profile);
@@ -30,8 +31,6 @@ passport.use(new GoogleStrategy({
         });
       }
     });
-    // Query the database to find user record associated with this
-    // google profile, then pass that object to done callback
   }
 ));
 

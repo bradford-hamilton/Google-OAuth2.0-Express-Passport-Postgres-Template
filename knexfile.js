@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/google-test'
+    connection: 'postgres://localhost/' + 'your local postgres database name'
   },
 
   production: {

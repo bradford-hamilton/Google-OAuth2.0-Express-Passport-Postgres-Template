@@ -9,4 +9,5 @@ module.exports = {
   createUser: function(profileId) {
     return knex('users').insert({ googleId: profileId });
   }
+  
 };
