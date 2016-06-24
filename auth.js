@@ -19,6 +19,7 @@ passport.use(new GoogleStrategy({
     callbackURL: "http://127.0.0.1:1337/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
+    console.log(profile);
     // Query the database to find user record associated with this
     // google profile, then pass that object to done callback
     return done(null, profile);
