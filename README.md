@@ -3,26 +3,32 @@ This is a template for using Google OAuth2.0 with Express and Passport.js. I wil
 
 1. Clone the repo, cd into it, and run npm install.
 
-2. Go to [https://console.developers.google.com/](https://console.developers.google.com/) and 'create credentials' for 'OAuth ClientId'.
+2. Make sure you have PostgreSQL installed and run createdb <database name> in your command line. Name your db whatever you'd like
 
-3. Select 'Web Application' and give it a name.
+3. Open up knexfile.js and under development > connection replace your-database-name, replace with the name of the db you just created.
 
-4. Set 'Authorized JavaScript origins' to whatever local port you are running the app on (in this template it's set to http://127.0.0.1:1337)
+4. Run 'knex migrate:latest' in the command line
 
-5. Set Authorized redirect URIs' to http://127.0.0.1:1337/auth/google/callback
+5. Go to [https://console.developers.google.com/](https://console.developers.google.com/) and 'create credentials' for 'OAuth ClientId'.
 
-6. It will show you clientId and you can click okay. When you get back to the credentials page you can click on your app name and it will give you Client ID and Client secret which you can access at any time. Leave this page open, as we need to put it into our app in step 8.
+6. Select 'Web Application' and give it a name.
 
-7. Click on 'Overview' on the left side nav and then find the Google+ api. Click on it. Enable that api.
+7. Set 'Authorized JavaScript origins' to whatever local port you are running the app on (in this template it's set to http://127.0.0.1:1337)
 
-8. Go back into editor and create a .env file. Add into that file 3 new environment variables:
+8. Set Authorized redirect URIs' to http://127.0.0.1:1337/auth/google/callback
+
+9. It will show you clientId and you can click okay. When you get back to the credentials page you can click on your app name and it will give you Client ID and Client secret which you can access at any time. Leave this page open, as we need to put it into our app in step 8.
+
+10. Click on 'Overview' on the left side nav and then find the Google+ api. Click on it. Enable that api.
+
+11. Go back into editor and create a .env file. Add into that file 3 new environment variables:
 
         GOOGLE_CLIENT_ID= <your client id>
         GOOGLE_CLIENT_SECRET= <your client secret>
         SESSION_KEY= <whatever you want>
 
-9. Make certain your .env file is included in your .gitignore - it should already be.
+12. Make certain your .env file is included in your .gitignore - it should already be.
 
-10. Run npm start or nodemon and visit http://localhost:1337
+13. Run npm start or nodemon and visit http://localhost:1337
 
-11. :)
+14. :)
