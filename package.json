@@ -1,0 +1,15 @@
+{
+  "name": "google-oauth2-template",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "cookie-parser": "^1.3.4",
+    "dotenv": "^2.0.0",
+    "express": "^4.12.4",
+    "express-session": "^1.11.2",
+    "hbs": "^3.0.1",
+    "morgan": "^1.5.3",
+    "passport": "^0.2.1",
+    "passport-google-oauth": "^0.2.0"
+  }
+}

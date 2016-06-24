@@ -1,0 +1,11 @@
+{{#if user}}
+	<h2>Hello, {{ user.displayName }}.</h2>
+	{{#each user.photos}}<img src="{{ value }}" alt="userPhoto">{{/each}}
+	<!-- {{#each user.emails}} {{ value }} {{/each}} -->
+	<a href="/" class='button'>Home</a> |
+	<a href="/logout" class='button'>Log Out</a>
+{{else}}
+	<h2>Welcome! Please log in.</h2>
+	<a href="/" class='button'>Home</a> |
+	<a href="/login" class='button'>Log In</a>
+{{/if}}
