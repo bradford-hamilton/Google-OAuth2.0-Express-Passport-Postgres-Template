@@ -9,7 +9,7 @@ This is a template for using Google OAuth2.0 with Express and Passport.js. I wil
 
 4. Run 'knex migrate:latest' in the command line
 
-5. Go to [https://console.developers.google.com/](https://console.developers.google.com/) and 'create credentials' for 'OAuth ClientId'.
+5. Go to [https://console.developers.google.com/](https://console.developers.google.com/) and create a new project then 'create credentials' for 'OAuth ClientId'.
 
 6. Select 'Web Application' and give it a name.
 
