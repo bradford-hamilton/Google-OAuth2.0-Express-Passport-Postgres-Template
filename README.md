@@ -1,4 +1,4 @@
-##Google OAuth2.0 with Express & Passport Template
+##Google OAuth2.0 with Express, PostgreSQL & Passport Template
 This is a template for using Google OAuth2.0 with Express and Passport.js. I will be adding more in the next couple days. It's functional for local use right now.
 
 1. Clone the repo, cd into it, and run npm install.
