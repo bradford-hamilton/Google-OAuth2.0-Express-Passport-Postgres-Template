@@ -1,6 +1,6 @@
-##Google OAuth2.0 with Express, PostgreSQL & Passport Template
+## Google OAuth2.0 with Express, PostgreSQL & Passport Template
 
-This is a template for using Google OAuth2.0 with Express and Passport.js. I will be adding more in the next couple days. It's functional for local use right now.
+This is a template for using Google OAuth2.0 with Express and Passport.js.
 
 1. Clone the repo, cd into it, and run npm install.
 
@@ -20,7 +20,7 @@ This is a template for using Google OAuth2.0 with Express and Passport.js. I wil
 
 9. It will show you clientId and you can click okay. When you get back to the credentials page you can click on your app name and it will give you Client ID and Client secret which you can access at any time. Leave this page open, as we need to put it into our app in step 8.
 
-10. Find the button to enable google apis > find the Google+ api > Click on it > Enable that api.
+10. Find the button to enable google apis > find the Google+ api > Enable that api.
 
 11. Go back into editor and create a .env file. Add into that file 3 new environment variables:
 
