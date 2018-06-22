@@ -13,7 +13,8 @@ passport.deserializeUser(function(obj, done) {
   done(null, obj);
 });
 
-passport.use(new GoogleStrategy({
+passport.use(
+  new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackURL: "http://127.0.0.1:1337/auth/google/callback"
@@ -26,14 +27,13 @@ passport.use(new GoogleStrategy({
       if (id) {
         return done(null, profile);
       } else {
-        db.createUser(profile.id).then(function(id) {
-          return done(null, profile);
-        });
+        db.createUser(profile.id)
+          .then(function(id) {
+            return done(null, profile);
+          });
       }
     });
-  }
-));
+  })
+);
 
-module.exports = {
-  passport: passport
-};
+module.exports = { passport: passport };
