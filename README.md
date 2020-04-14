@@ -1,3 +1,5 @@
+## This work is starting to become really dated and I don't have interest in supporting it which is why I've archived the repo. May or may not still work.
+
 ## Google OAuth2.0 with Express, PostgreSQL & Passport Template
 
 This is a template for using Google OAuth2.0 with Express and Passport.js.
