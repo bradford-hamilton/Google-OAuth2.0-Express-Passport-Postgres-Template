@@ -1,4 +1,4 @@
-### This work is starting to become really dated and I don't have interest in supporting it, so it is now archived and read-only.
+### This work is starting to become really dated and I don't have interest in supporting it, so it is now read-only.
 
 ## Google OAuth2.0 with Express, PostgreSQL & Passport Template
 
